@@ -1,0 +1,29 @@
+{
+  "name": "vibe-sites",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.30.0",
+  "scripts": {
+    "clean": "node ./scripts/clean.mjs",
+    "generate:registry": "node ./scripts/generate-demo-registry.mjs",
+    "build": "pnpm run clean && pnpm run generate:registry && pnpm --filter @vibe-sites/hub build && pnpm -r --filter './apps/demos/*' build",
+    "dev": "pnpm run clean && pnpm run generate:registry && concurrently -k -n registry,hub,demos -c cyan,magenta,yellow \"node ./scripts/generate-demo-registry.mjs --watch\" \"pnpm --filter @vibe-sites/hub dev\" \"pnpm -r --parallel --filter './apps/demos/*' dev\"",
+    "deploy": "pnpm run generate:registry && pnpm run deploy:demos && pnpm run deploy:hub",
+    "deploy:hub": "pnpm --filter @vibe-sites/hub run deploy",
+    "deploy:demos": "pnpm -r --filter './apps/demos/*' run deploy",
+    "new:demo": "node ./scripts/new-demo.mjs",
+    "test": "pnpm run build"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260327.0",
+    "@types/node": "^24.5.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "concurrently": "^9.2.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7",
+    "wrangler": "^4.39.0"
+  }
+}
