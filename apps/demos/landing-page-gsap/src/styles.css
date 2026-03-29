@@ -10,3 +10,94 @@
   letter-spacing: 0.08em;
   font-size: 0.8rem;
 }
+
+/* ===== CSS Variables ===== */
+:root {
+  /* Dark theme (Hero) */
+  --dark-bg: #0a0a0f;
+  --dark-text: #fafaf9;
+  --accent-purple: #8b5cf6;
+  --accent-cyan: #06b6d4;
+
+  /* Light theme */
+  --light-bg: #fafaf9;
+  --light-text: #1c1917;
+  --light-secondary: #78716c;
+
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ===== Reset & Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== Utility Classes ===== */
+.section {
+  position: relative;
+  width: 100%;
+}
+
+.section-dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.section-light {
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+
+.container {
+  width: min(1200px, calc(100vw - 2rem));
+  margin: 0 auto;
+  padding: 5rem 1rem;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Animation Utilities ===== */
+.will-animate {
+  will-change: transform, opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-purple);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}

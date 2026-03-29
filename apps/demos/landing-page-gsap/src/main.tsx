@@ -1,16 +1,8 @@
+// src/main.tsx
 import React from "react";
 import ReactDOM from "react-dom/client";
+import App from "./App";
 import "./styles.css";
-
-function App() {
-  return (
-    <main className="page">
-      <p className="eyebrow">Draft demo</p>
-      <h1>Landing Page Gsap</h1>
-      <p>This starter was generated with the react template.</p>
-    </main>
-  );
-}
 
 ReactDOM.createRoot(document.querySelector("#root") as HTMLElement).render(
   <React.StrictMode>
