@@ -3,8 +3,8 @@ import type { DemoMeta } from "./types";
 export const demos: DemoMeta[] = [
   {
     "slug": "ogx-claude",
-    "title": "Ogx Claude",
-    "description": "A new React demo inside the Vibe Sites monorepo.",
+    "title": "OGX",
+    "description": "A new OG Image Generator demo inside the Vibe Sites monorepo.",
     "stack": [
       "React",
       "Vite",
@@ -14,7 +14,7 @@ export const demos: DemoMeta[] = [
     "status": "published",
     "sourcePath": "apps/demos/ogx-claude",
     "localUrl": "http://localhost:8794",
-    "productionUrl": ""
+    "productionUrl": "https://vibe-demo-ogx-claude.2437951611.workers.dev"
   }
 ] as DemoMeta[];
 
