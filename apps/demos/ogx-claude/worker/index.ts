@@ -1,5 +1,5 @@
 export interface Env {
-  ASSETS: Fetcher;
+  ASSETS: any;
 }
 
 export default {

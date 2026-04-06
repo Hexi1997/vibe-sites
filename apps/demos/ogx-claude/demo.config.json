@@ -1,0 +1,9 @@
+{
+  "slug": "ogx-claude",
+  "title": "Ogx Claude",
+  "description": "A new React demo inside the Vibe Sites monorepo.",
+  "stack": ["React", "Vite", "Tailwind CSS", "Cloudflare Workers"],
+  "status": "published",
+  "localUrl": "http://localhost:8794",
+  "productionUrl": ""
+}

@@ -1,9 +1,0 @@
-{
-  "slug": "landing-page-gsap",
-  "title": "Landing Page Gsap",
-  "description": "A new React demo inside the Vibe Sites monorepo.",
-  "stack": ["React", "Vite", "Cloudflare Workers"],
-  "status": "published",
-  "localUrl": "http://localhost:8790",
-  "productionUrl": "https://vibe-demo-landing-page-gsap.2437951611.workers.dev"
-}

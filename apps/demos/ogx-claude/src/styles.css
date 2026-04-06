@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --color-og-dark: #201d1d;
+  --color-og-dark-surface: #302c2c;
+  --color-og-light: #fdfcfc;
+  --color-og-gray: #9a9898;
+  --color-og-muted: #6e6e73;
+  --color-og-border: rgba(15, 0, 0, 0.12);
+  --color-og-outline: #646262;
+  --color-og-accent: #007aff;
+  --color-og-green: #30d158;
+  --color-og-orange: #ff9f0a;
+  --color-og-red: #ff3b30;
+}
+
+/* Blink cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Typing animation for the demo */
+@keyframes typing-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

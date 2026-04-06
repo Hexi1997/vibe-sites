@@ -1,11 +1,11 @@
 {
-  "name": "@vibe-sites/demo-landing-page-vite-threejs",
+  "name": "@vibe-sites/demo-ogx-claude",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "dev": "concurrently -k -n build,worker -c magenta,green \"vite build --watch\" \"node ../../../scripts/wait-for-path.mjs dist/public/index.html && wrangler dev --port 8791 --inspector-port 9241\"",
+    "dev": "concurrently -k -n build,worker -c magenta,green \"vite build --watch\" \"node ../../../scripts/wait-for-path.mjs dist/public/index.html && wrangler dev --port 8794 --inspector-port 9244\"",
     "deploy": "pnpm run build && wrangler deploy"
   },
   "dependencies": {
@@ -13,8 +13,12 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.2.0",
     "concurrently": "^9.2.1",
+    "tailwindcss": "^4",
     "vite": "^7.3.1",
     "wrangler": "^4.78.0"
   }
