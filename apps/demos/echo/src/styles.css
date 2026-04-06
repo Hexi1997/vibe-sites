@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "SpotifyMixUI", "Circular", "Helvetica Neue", helvetica, arial, sans-serif;
+  --font-display: "SpotifyMixUITitle", "Circular", "Helvetica Neue", helvetica, arial, sans-serif;
+
+  --color-brand: #1ed760;
+  --color-brand-dim: #1db954;
+  --color-base: #121212;
+  --color-surface: #181818;
+  --color-surface-mid: #1f1f1f;
+  --color-surface-card: #252525;
+  --color-text: #ffffff;
+  --color-text-secondary: #b3b3b3;
+  --color-border: #4d4d4d;
+  --color-border-light: #7c7c7c;
+}
+
+@font-face {
+  font-family: "SpotifyMixUI";
+  font-weight: 400 700;
+  src: local("Circular"), local("Helvetica Neue"), local("helvetica");
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: #121212;
+  color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Waveform canvas shader animation */
+@keyframes waveFloat {
+  0%, 100% { transform: translateY(0px) scaleY(1); }
+  25% { transform: translateY(-8px) scaleY(1.05); }
+  75% { transform: translateY(4px) scaleY(0.97); }
+}
+
+@keyframes barPulse {
+  0%, 100% { transform: scaleY(0.3); opacity: 0.4; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes vinylSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 0.6; }
+  70%, 100% { transform: scale(1.8); opacity: 0; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease both;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+.hero-gradient {
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(30, 215, 96, 0.15) 0%, transparent 60%),
+              radial-gradient(ellipse 40% 40% at 80% 20%, rgba(30, 215, 96, 0.06) 0%, transparent 50%),
+              #121212;
+}
+
+.vinyl-record {
+  animation: vinylSpin 3s linear infinite;
+}
+
+.vinyl-record.paused {
+  animation-play-state: paused;
+}
+
+.marquee-track {
+  animation: slideLeft 30s linear infinite;
+}
+
+.bar {
+  animation: barPulse var(--duration, 1s) ease-in-out var(--delay, 0s) infinite;
+  transform-origin: bottom;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c7c7c;
+}

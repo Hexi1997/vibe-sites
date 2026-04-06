@@ -1,3 +1,7 @@
+Claude Code v2.1.92
+
+Sonnet 4.6 · API Usage Billing
+
 <b>Question:</b>
 
 请使用已安装的 impeccable/frontend-design skill， 根据 [@PRD.md](./PRD.md) 的需求文档，参考 [@DESIGN.md](./DESIGN.md) 的风格设计一个落地页。

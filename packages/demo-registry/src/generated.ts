@@ -2,6 +2,21 @@ import type { DemoMeta } from "./types";
 
 export const demos: DemoMeta[] = [
   {
+    "slug": "echo",
+    "title": "Echo",
+    "description": "A new React demo inside the Vibe Sites monorepo.",
+    "stack": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Cloudflare Workers"
+    ],
+    "status": "published",
+    "sourcePath": "apps/demos/echo",
+    "localUrl": "http://localhost:8795",
+    "productionUrl": ""
+  },
+  {
     "slug": "ogx-claude",
     "title": "OGX",
     "description": "A new OG Image Generator demo inside the Vibe Sites monorepo.",
