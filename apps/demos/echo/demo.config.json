@@ -5,5 +5,5 @@
   "stack": ["React", "Vite", "Tailwind CSS", "Cloudflare Workers"],
   "status": "published",
   "localUrl": "http://localhost:8795",
-  "productionUrl": ""
+  "productionUrl": "https://vibe-demo-echo.2437951611.workers.dev"
 }

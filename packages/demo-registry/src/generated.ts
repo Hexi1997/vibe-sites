@@ -14,7 +14,7 @@ export const demos: DemoMeta[] = [
     "status": "published",
     "sourcePath": "apps/demos/echo",
     "localUrl": "http://localhost:8795",
-    "productionUrl": ""
+    "productionUrl": "https://vibe-demo-echo.2437951611.workers.dev"
   },
   {
     "slug": "ogx-claude",
