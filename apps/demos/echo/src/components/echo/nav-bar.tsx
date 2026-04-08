@@ -19,14 +19,23 @@ export function NavBar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-      style={{
-        background: scrolled ? "rgba(18,18,18,0.95)" : "transparent",
-        backdropFilter: scrolled ? "blur(12px)" : "none",
-        borderBottom: scrolled ? "1px solid #2a2a2a" : "none",
-      }}
+      className="fixed top-0 left-0 right-0 z-50"
     >
-      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div
+        aria-hidden="true"
+        className={`absolute inset-0 transition-opacity duration-300 ${scrolled ? "opacity-100" : "opacity-0"}`}
+        style={{
+          background: "rgba(18,18,18,0.95)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className={`absolute inset-x-0 bottom-0 h-px bg-[#2a2a2a] transition-opacity duration-300 ${scrolled ? "opacity-100" : "opacity-0"}`}
+      />
+
+      <div className="relative max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "#1ed760" }}>
             <span className="text-black text-sm font-black">E</span>
@@ -70,7 +79,7 @@ export function NavBar() {
       </div>
 
       {menuOpen ? (
-        <div className="md:hidden border-t border-[#2a2a2a] bg-[#181818] px-6 py-4 space-y-2">
+        <div className="relative md:hidden border-t border-[#2a2a2a] bg-[#181818] px-6 py-4 space-y-2">
           {NAV_LINKS.map((l) => (
             <a
               key={l.href}
